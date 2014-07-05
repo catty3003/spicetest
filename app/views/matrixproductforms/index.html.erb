@@ -1,0 +1,27 @@
+<h1>Listing matrixproductforms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product form</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matrixproductforms.each do |matrixproductform| %>
+      <tr>
+        <td><%= matrixproductform.product_form %></td>
+        <td><%= link_to 'Show', matrixproductform %></td>
+        <td><%= link_to 'Edit', edit_matrixproductform_path(matrixproductform) %></td>
+        <td><%= link_to 'Destroy', matrixproductform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Matrixproductform', new_matrixproductform_path %>

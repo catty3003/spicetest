@@ -1,0 +1,21 @@
+<%= form_for(@matrixspecy) do |f| %>
+  <% if @matrixspecy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@matrixspecy.errors.count, "error") %> prohibited this matrixspecy from being saved:</h2>
+
+      <ul>
+      <% @matrixspecy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :m_species %><br>
+    <%= f.text_field :m_species %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

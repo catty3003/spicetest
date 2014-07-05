@@ -1,0 +1,21 @@
+<%= form_for(@matrixplantpart) do |f| %>
+  <% if @matrixplantpart.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@matrixplantpart.errors.count, "error") %> prohibited this matrixplantpart from being saved:</h2>
+
+      <ul>
+      <% @matrixplantpart.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :plant_part %><br>
+    <%= f.text_field :plant_part %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

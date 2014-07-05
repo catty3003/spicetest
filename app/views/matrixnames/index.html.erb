@@ -1,0 +1,27 @@
+<h1>Listing matrixnames</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>M common name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matrixnames.each do |matrixname| %>
+      <tr>
+        <td><%= matrixname.m_common_name %></td>
+        <td><%= link_to 'Show', matrixname %></td>
+        <td><%= link_to 'Edit', edit_matrixname_path(matrixname) %></td>
+        <td><%= link_to 'Destroy', matrixname, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Matrixname', new_matrixname_path %>

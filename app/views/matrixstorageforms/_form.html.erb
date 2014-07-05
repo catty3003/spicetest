@@ -1,0 +1,21 @@
+<%= form_for(@matrixstorageform) do |f| %>
+  <% if @matrixstorageform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@matrixstorageform.errors.count, "error") %> prohibited this matrixstorageform from being saved:</h2>
+
+      <ul>
+      <% @matrixstorageform.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :storage_form %><br>
+    <%= f.text_field :storage_form %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

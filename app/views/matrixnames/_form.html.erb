@@ -1,0 +1,21 @@
+<%= form_for(@matrixname) do |f| %>
+  <% if @matrixname.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@matrixname.errors.count, "error") %> prohibited this matrixname from being saved:</h2>
+
+      <ul>
+      <% @matrixname.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :m_common_name %><br>
+    <%= f.text_field :m_common_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Listing matrixspecies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>M species</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matrixspecies.each do |matrixspecy| %>
+      <tr>
+        <td><%= matrixspecy.m_species %></td>
+        <td><%= link_to 'Show', matrixspecy %></td>
+        <td><%= link_to 'Edit', edit_matrixspecy_path(matrixspecy) %></td>
+        <td><%= link_to 'Destroy', matrixspecy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Matrixspecy', new_matrixspecy_path %>
